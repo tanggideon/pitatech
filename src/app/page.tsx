@@ -32,8 +32,8 @@ const services = [
 export default function Home() {
   return (
     <div className="w-full bg-[url('/images/texture1.jpg')] bg-cover bg-center h-full">
-      <nav className="w-full z-10 h-20 px-10 py-5 flex items-center justify-between fixed">
-        <h1 className="text-white text-2xl font-bold">Pitatech Company LTD</h1>
+      <nav className="w-full z-10 h-20 px-10 py-5 flex items-center justify-between fixed bg-green-400">
+        <h1 className="text-white text-xs md:text-2xl font-bold">Pitatech Company LTD</h1>
         <a href="#contact-us">
 
         <button className="bg-white text-green-600 font-bold px-5 py-2 rounded-lg shadow-lg hover:bg-green-100">Get a Quote</button>
