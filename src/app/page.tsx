@@ -1,65 +1,52 @@
+import AboutCard from "@/components/aboutCard";
+import AboutUs from "@/components/aboutSection";
+import ContactUs from "@/components/contactUs";
+import HeroSection from "@/components/heroSection";
+import ReviewSection from "@/components/reviewSection";
 import Image from "next/image";
+
+const services = [
+  {
+    title: "Borehole Installation & Maintenance",
+    image: "/images/borehole_drilling.jpg",
+    info: "We provide expert level installations and after sales maintenance of pumps and boreholes to all our clients all over Ghana all at affordable prices"
+  },
+  {
+    title: "Geological Surveying",
+    image: "/images/survey.jpg",
+    info: "Our teams of engineers and surveyors are elites in the systematic investigation of an area to map its rock formations, mineral resources, and subsurface structures"
+  },
+  {
+    title: "Pump Testing",
+    image: "/images/team.jpg",
+    info: "Our after sales services are top-notched, and even if we did not install it, we will make sure you have no problems after we are done"
+  },
+  {
+    title: "Water Quality Analysis",
+    image: "/images/testing.jpg",
+    info: ""
+  },
+];
+
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="w-full bg-[url('/images/texture1.jpg')] bg-cover bg-center h-full">
+      <nav className="w-full z-10 h-20 px-10 py-5 flex items-center justify-between fixed">
+        <h1 className="text-white text-2xl font-bold">Pitatech Company LTD</h1>
+        <a href="#contact-us">
+
+        <button className="bg-white text-green-600 font-bold px-5 py-2 rounded-lg shadow-lg hover:bg-green-100">Get a Quote</button>
+        </a>
+      </nav>
+      <HeroSection />
+      <AboutUs services={services} />
+      <ReviewSection />
+      <ContactUs />
+      <footer className="w-full bg-green-400 h-20 px-10 py-5 flex flex-col items-center justify-center gap-3">
+        <h1 className="text-black z-10 font-bold text-sm">© 2025 Pitatech Company LTD</h1>
+        <h6 className="text-xs">Powered by <span className="font-semibold">T & N Digital Solutions</span></h6>
+      </footer>
     </div>
   );
 }
